@@ -1,0 +1,114 @@
+.cards {
+    color: $white;
+    @include respond-to("medium") {
+        white-space: nowrap;
+        overflow-x: scroll;
+        padding-bottom: .8rem;
+    }
+    .card {
+        flex: 0 0 100%;
+        padding: .8rem;
+        border-radius: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        @include shadow($grey, .2);
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+            @include respond-to("medium") {
+                margin-bottom: 0;
+            }
+        }
+        @include respond-to("medium") {
+            width: 350px;
+            display: inline-block;
+            vertical-align: top;
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+        &__img {
+            flex: 0 0 25%;
+            height: 5.5rem;
+            @include respond-to("landscape") {
+                flex: 0 0 20%;
+                height: 6rem;
+            }
+            @include respond-to("medium") {
+                flex: 0 0 100%;
+                text-align: center;
+            }
+            img {
+                height: 5.5rem;
+                width: 100%;
+                object-fit: cover;
+                @include rounded-corner(5px);
+                @include respond-to("landscape") {
+                    height: 6rem;
+                }
+                @include respond-to("medium") {
+                    width: 6rem;
+                    height: 6rem;
+                }
+            }
+        }
+        &__texts {
+            flex: 0 0 71%;
+            font-size: .7rem;
+            @include respond-to("landscape") {
+                flex: 0 0 78%;
+            }
+            @include respond-to("medium") {
+                margin: 1rem 0;
+            }
+            .name {
+                font-weight: 700;
+                font-size: 1rem;
+            }
+            p {
+                &:not(:last-child) {
+                    margin-bottom: .3rem;
+                }
+            }
+        }
+        &__descs {
+            margin-top: .7rem;
+            @include respond-to("medium") {
+                margin-top: 0;
+            }
+            .desc {
+                font-size: .9rem;
+                white-space: normal;
+                @include respond-to("medium") {
+                    display: flex;
+                    align-items: center;
+                    &:not(:last-child) {
+                        margin-bottom: .5rem;
+                    }
+                }
+                i {
+                    display: none;
+                    @include respond-to("landscape") {
+                        display: inline-block;
+                        width: 1.2rem;
+                        text-align: center;
+                        margin-right: .3rem;
+                    }
+                    @include respond-to("medium") {
+                        margin-right: .4rem;
+                    }
+                }
+            }
+        }
+        &--red {
+            @include gradient-bg(to left top, $red, $red-light)
+        }
+        &--blue {
+            @include gradient-bg(to left top, $blue, $blue-light)
+        }
+        &--green {
+            @include gradient-bg(to left top, $green, $green-light)
+        }
+    }
+}

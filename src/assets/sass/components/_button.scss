@@ -1,0 +1,32 @@
+.btn {
+    border: none;
+    padding: .5rem .8rem;
+    color: $white;
+    transition: all .5s ease-out;
+    cursor: pointer;
+    @include rounded-corner(5px);
+    @include respond-to("small") {
+        font-size: .9rem;
+    }
+    &:focus {
+        outline: 0;
+    }
+    &:hover {
+        @include respond-to("desktop") {
+            transform: translateY(-3%);
+        }
+    }
+    &:active {
+        transform: translateY(0) scale(.94);
+    }
+    i {
+        margin-right: .3rem;
+    }
+    &--orange {
+        margin-right: .5rem;
+        @include gradient-bg(to right bottom, $orange, $orange-light);
+    }
+    &--blue {
+        @include gradient-bg(to right bottom, $grey, $grey-light);
+    }
+}

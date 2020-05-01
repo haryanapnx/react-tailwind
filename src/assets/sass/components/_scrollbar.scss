@@ -1,0 +1,10 @@
+::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+    background: #f1f2f6;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: $orange;
+    border-radius: 10px;
+}

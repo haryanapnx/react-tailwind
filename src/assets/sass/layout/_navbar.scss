@@ -1,0 +1,24 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    -webkit-box-shadow: 10px 10px 36px -17px rgba($grey, 0.24);
+    -moz-box-shadow: 10px 10px 36px -17px rgba($grey, 0.24);
+    box-shadow: 10px 10px 36px -17px rgba($grey, 0.24);
+    &__logo {
+        flex-basis: 40%;
+        text-transform: capitalize;
+        font-weight: 700;
+        color: $grey;
+        font-size: 1.2rem;
+        span {
+            color: $orange;
+        }
+    }
+    &__buttons {
+        flex-basis: 60%;
+        text-align: right;
+    }
+}

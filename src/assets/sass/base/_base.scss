@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+html {
+    @include respond-to("small") {
+        font-size: 110%;
+    }
+    @include respond-to("landscape") {
+        font-size: 120%;
+    }
+    @include respond-to("medium") {
+        font-size: 125%;
+    }
+}
+
+.app {
+    height: 100vh;
+    width: 100%;
+}
+
+.resp {
+    &--mobile {
+        @include respond-to("medium") {
+            display: none;
+        }
+    }
+    &--web {
+        display: none;
+        @include respond-to("medium") {
+            display: inline;
+        }
+    }
+}
+
+.container {
+    padding: 1.2rem;
+    @include respond-to("desktop") {
+        padding: 1.5rem;
+    }
+}
