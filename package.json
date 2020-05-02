@@ -22,13 +22,10 @@
   "scripts": {
     "build:css": "postcss src/tailwind.css -o src/tailwind.generated.css",
     "watch:css": "postcss -w src/tailwind.css -o src/tailwind.generated.css",
-
     "start": "run-p watch:css start:react",
     "start:react": "react-scripts start",
-
     "prebuild": "npm run build:css",
     "build": "react-scripts build",
-
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -46,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-hot-loader": "^4.12.21"
   }
 }
