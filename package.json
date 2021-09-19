@@ -8,7 +8,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "autoprefixer": "^9.7.6",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "dayjs": "^1.8.26",
     "lodash": "^4.17.21",
     "node-sass": "^4.13.0",
